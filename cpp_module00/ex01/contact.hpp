@@ -19,7 +19,18 @@ class	Contact
 		std::string	underwearColor;
 		std::string	darkestSecret;
 	public:
-		void	setContactData();
+		std::string	getFirstName();
+		std::string	getLastName();
+		std::string	getNickname();
+		std::string	getLogin();
+		std::string	getPostalAddress();
+		std::string	getEmail();
+		std::string	getPhone();
+		std::string	getBirthdayDate();
+		std::string	getFavoriteMeal();
+		std::string	getUnderwearColor();
+		std::string	getDarkestSecret();
+		void		setContactData();
 };
 
 #endif
