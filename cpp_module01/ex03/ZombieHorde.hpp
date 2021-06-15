@@ -7,10 +7,12 @@ class	ZombieHorde
 	private:
 		Zombie *zombie;
 		int		_n;
+		ZombieHorde();
+		void	removeZombies();
 	public:
 		ZombieHorde(int	n);
+		~ZombieHorde();
 		void	announce();
-		void	removeZombies();
 };
 
 #endif

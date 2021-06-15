@@ -4,5 +4,5 @@ int	main()
 {
 	ZombieHorde horde(10);
 	horde.announce();
-	horde.removeZombies();
+	while (1);
 }

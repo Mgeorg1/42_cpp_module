@@ -16,6 +16,11 @@ ZombieHorde::ZombieHorde(int n)
 		this->zombie = NULL; 
 }
 
+ZombieHorde::~ZombieHorde()
+{
+	removeZombies();
+}
+
 void	ZombieHorde::removeZombies()
 {
 	if (this->_n > 0)

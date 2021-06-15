@@ -7,6 +7,7 @@ class	HumanB
 	private:
 		Weapon		*_weapon;
 		std::string	_name;
+		HumanB();
 	public:
 		HumanB(const std::string &name);
 		void	setWeapon(Weapon weapon);
