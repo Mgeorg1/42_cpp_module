@@ -11,7 +11,7 @@ HumanB::~HumanB()
 	std::cout << "Human was killed!\n";
 }
 
-void	HumanB::setWeapon(Weapon weapon)
+void	HumanB::setWeapon(Weapon &weapon)
 {
 	this->_weapon = &weapon;
 }

@@ -10,7 +10,7 @@ void	Phonebook::addContact()
 {
 	if (this->count >= 8)
 	{
-		std::cout << "ERROR: Phonebook is full!" << std::endl;
+		std::cout << "\x1b[31mERROR:\x1b[0m Phonebook is full!" << std::endl;
 		return ;
 	}
 	this->contacts[this->count].setContactData();
@@ -25,7 +25,7 @@ void	Phonebook::search()
 
 	if (this->count == 0)
 	{
-		std::cout << "ERROR: Phonebook is empty!" << std::endl;
+		std::cout << "\x1b[31mERROR:\x1b[0m Phonebook is empty!" << std::endl;
 		return ;
 	}
 	std::cout << std::endl;
@@ -64,7 +64,7 @@ void	Phonebook::search()
 	success = 0;
 	while (!success)
 	{
-		std::cout << "Please enter index:\n> ";
+		std::cout << "Please enter \x1b[32mindex\x1b[0m to display the contact's data or \x1b[32m0\x1b[0m to go back:\n> ";
 		getline(std::cin, tmp);
 		if (!std::cin)
 			exit(0);
@@ -72,7 +72,7 @@ void	Phonebook::search()
 		{
 			if (std::isdigit(tmp[i]) == false)
 			{
-				std::cout << "ERROR: Please enter NUMERIC value!" << std::endl;
+				std::cout << "\x1b[31mERROR:\x1b[0m Please enter NUMERIC value!" << std::endl;
 				success = NOT_NUMERIC;
 				break ;
 			}
@@ -82,25 +82,28 @@ void	Phonebook::search()
 			success = 0;
 			continue ;
 		}
-		i = atoi(tmp.c_str()) - 1;
+		i = atoi(tmp.c_str());
+		if (i == 0)
+			return ;
+		i -= 1;
 		if (i >= this->count || i < 0)
 		{
-			std::cout << "ERROR: Wrong index!" << std::endl;
+			std::cout << "\x1b[31mERROR:\x1b[0m Wrong index!" << std::endl;
 			continue ;
 		}
 		success = 1;
 	}
 	std::cout << std::endl;
-	std::cout << "First name: " << this->contacts[i].getFirstName() << std::endl;
-	std::cout << "Last name: " << this->contacts[i].getLastName() << std::endl;
-	std::cout << "Nickname: " << this->contacts[i].getNickname() << std::endl;
-	std::cout << "Login: " << this->contacts[i].getLogin() << std::endl;
-	std::cout << "Postal address: " << this->contacts[i].getPostalAddress() << std::endl;
-	std::cout << "Email address: " << this->contacts[i].getEmail() << std::endl;
-	std::cout << "Phone number: " << this->contacts[i].getPhone() << std::endl;
-	std::cout << "Bithday date: " << this->contacts[i].getBirthdayDate() << std::endl;
-	std::cout << "Favorite meal: " << this->contacts[i].getFavoriteMeal() << std::endl;
-	std::cout << "Underwear color: " << this->contacts[i].getUnderwearColor() << std::endl;
-	std::cout << "Darkest secret: " << this->contacts[i].getDarkestSecret() << std::endl;
+	std::cout << "\x1b[37;1mFirst name:\x1b[0m      " << this->contacts[i].getFirstName() << std::endl;
+	std::cout << "\x1b[37;1mLast name:\x1b[0m       " << this->contacts[i].getLastName() << std::endl;
+	std::cout << "\x1b[37;1mNickname:\x1b[0m        " << this->contacts[i].getNickname() << std::endl;
+	std::cout << "\x1b[37;1mLogin:\x1b[0m           " << this->contacts[i].getLogin() << std::endl;
+	std::cout << "\x1b[37;1mPostal address:\x1b[0m  " << this->contacts[i].getPostalAddress() << std::endl;
+	std::cout << "\x1b[37;1mEmail address:\x1b[0m   " << this->contacts[i].getEmail() << std::endl;
+	std::cout << "\x1b[37;1mPhone number: \x1b[0m   " << this->contacts[i].getPhone() << std::endl;
+	std::cout << "\x1b[37;1mBithday date: \x1b[0m   " << this->contacts[i].getBirthdayDate() << std::endl;
+	std::cout << "\x1b[37;1mFavorite meal: \x1b[0m  " << this->contacts[i].getFavoriteMeal() << std::endl;
+	std::cout << "\x1b[37;1mUnderwear color: \x1b[0m" << this->contacts[i].getUnderwearColor() << std::endl;
+	std::cout << "\x1b[37;1mDarkest secret: \x1b[0m " << this->contacts[i].getDarkestSecret() << std::endl;
 	std::cout << std::endl;
 }

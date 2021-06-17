@@ -5,10 +5,11 @@ int main()
 	Phonebook	phonebook;
 	std::string	line;
 
-	std::cout << "Crappy awesome phonebook software" << std::endl;
+	std::cout << "\x1b[37;1mCRAPPY AWESOME PHONEBOOK SOFTWARE\x1b[0m" << std::endl;
 	while (1)
 	{
-		std::cout << "For add new contact enter the command ADD, for search enter SEARCH.\nIf you want close current session enter the command EXIT\n> ";
+		std::cout << "To add new contact enter the command \x1b[32;1mADD\x1b[0m\n";
+		std::cout << "To search enter \x1b[32;1mSEARCH\x1b[0m.\nIf you want close current session enter the command \x1b[32;1mEXIT\x1b[0m\n> ";
 		getline(std::cin, line);
 		if (!std::cin)
 			exit(0);
@@ -19,6 +20,6 @@ int main()
 		else if (line == "EXIT")
 			return (0);
 		else
-			std::cout << "Command not found!" << std::endl;
+			std::cout << "\x1b[31mERROR:\x1b[0m Command not found!" << std::endl;
 	}
 }

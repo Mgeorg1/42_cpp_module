@@ -3,57 +3,57 @@
 void	Contact::setContactData()
 {
 	std::string line;
-	std::cout << "Please, input a first name:\n> ";
+	std::cout << "Please, input a \x1b[32mfirst name:\x1b[0m\n> ";
 	getline(std::cin, line);
 	if (!std::cin)
 		exit(0);
 	this->firstName = line;
-	std::cout << "Please, input a last name:\n> ";
+	std::cout << "Please, input a \x1b[32mlast name:\x1b[0m\n> ";
 	getline(std::cin, line);
 	if (!std::cin)
 		exit(0);
 	this->lastName = line;
-	std::cout << "Please, input a nickname:\n> ";
+	std::cout << "Please, input a \x1b[32mnickname:\x1b[0m\n> ";
 	getline(std::cin, line);
 	if (!std::cin)
 		exit(0);
 	this->nickname = line;
-	std::cout << "Please, input a login:\n> ";
+	std::cout << "Please, input a \x1b[32mlogin:\x1b[0m\n> ";
 	getline(std::cin, line);
 	if (!std::cin)
 		exit(0);
 	this->login = line;
-	std::cout << "Please, input a postal address:\n> ";
+	std::cout << "Please, input a \x1b[32mpostal address:\x1b[0m\n> ";
 	getline(std::cin, line);
 	if (!std::cin)
 		exit(0);
 	this->postalAddress = line;
-	std::cout << "Please, input a email address:\n> ";
+	std::cout << "Please, input an \x1b[32memail address:\x1b[0m\n> ";
 	getline(std::cin, line);
 	if (!std::cin)
 		exit(0);
 	this->emailAdress = line;
-	std::cout << "Please, input a phone number:\n> ";
+	std::cout << "Please, input a \x1b[32mphone number:\x1b[0m\n> ";
 	getline(std::cin, line);
 	if (!std::cin)
 		exit(0);
 	this->phoneNumber = line;
-	std::cout << "Please, input a birthday date:\n> ";
+	std::cout << "Please, input a \x1b[32mbirthday date:\x1b[0m\n> ";
 	getline(std::cin, line);
 	if (!std::cin)
 		exit(0);
 	this->bithdayDate = line;
-	std::cout << "Please, input a favorite meal:\n> ";
+	std::cout << "Please, input a \x1b[32mfavorite meal:\x1b[0m\n> ";
 	getline(std::cin, line);
 	if (!std::cin)
 		exit(0);
 	this->favoriteMeal = line;
-	std::cout << "Please, input a underwear color:\n> ";
+	std::cout << "Please, input an \x1b[32munderwear color:\x1b[0m\n> ";
 	getline(std::cin, line);
 	if (!std::cin)
 		exit(0);
 	this->underwearColor = line;
-	std::cout << "Please, input a darkest secret:\n> ";
+	std::cout << "Please, input a \x1b[32mdarkest secret:\x1b[0m\n> ";
 	getline(std::cin, line);
 	if (!std::cin)
 		exit(0);
