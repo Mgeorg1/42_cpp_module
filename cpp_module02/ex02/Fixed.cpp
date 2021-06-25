@@ -112,14 +112,14 @@ bool Fixed::operator!=(Fixed const &b) const
 Fixed Fixed::operator*(Fixed const &b)
 {
 	Fixed 	ret(*this);
-	ret.setRawBits((this->getRawBits() * b.getRawBits()) >> this->_bits);
+	ret.setRawBits(((long)this->getRawBits() * (long)b.getRawBits()) >> this->_bits);
 	return (ret);
 }
 
 Fixed Fixed::operator/(Fixed const &b)
 {
 	Fixed 	ret(*this);
-	ret.setRawBits((this->getRawBits() << this->_bits) / b.getRawBits());
+	ret.setRawBits(((long)this->getRawBits() << this->_bits) / b.getRawBits());
 	return (ret);
 }
 
