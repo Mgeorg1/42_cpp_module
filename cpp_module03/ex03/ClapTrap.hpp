@@ -10,8 +10,8 @@ protected:
 	int			_hitpoints;
 	int			_energyPoints;
 	int			_attackDamage;
-public:
 	ClapTrap();
+public:
 	ClapTrap(std::string const &name);
 	~ClapTrap();
 	ClapTrap(const ClapTrap &copy);

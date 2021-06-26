@@ -2,17 +2,11 @@
 
 ScavTrap::ScavTrap()
 {
-	this->_hitpoints = 100;
-	this->_energyPoints = 50;
-	this->_attackDamage = 20;
-	std::cout << "Scav Trap was created!\n";
 }
 
 ScavTrap::ScavTrap(std::string const &name) : ClapTrap(name)
 {
-	this->_hitpoints = 100;
 	this->_energyPoints = 50;
-	this->_attackDamage = 20;
 	std::cout << "Scav Trap " << this->_name << " was created!\n";
 }
 
@@ -39,4 +33,16 @@ void	ScavTrap::guardGate()
 ScavTrap::~ScavTrap()
 {
 	std::cout << "Scav Trap " << this->_name << " was destroyed\n";
+}
+
+void	ScavTrap::attack(std::string const &target)
+{
+	if (this->_energyPoints > 0)
+	{
+		std::cout << "Scav Trap " << this->_name << " attacks " << target \
+			<< ", causing " << this->_attackDamage << " points of damage!\n";
+		this->_energyPoints--;
+	}
+	else
+		std::cout << "Scav Trap " << this->_name << " can not attack, because energy points is 0!\n";
 }

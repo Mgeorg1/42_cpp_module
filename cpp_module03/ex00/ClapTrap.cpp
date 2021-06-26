@@ -31,7 +31,7 @@ ClapTrap& ClapTrap::operator=(const ClapTrap &copy)
 ClapTrap::ClapTrap(const ClapTrap &copy)
 {
 	*this = copy;
-	std::cout << "New Clap Trap was created!\n";
+	std::cout << "New Clap Trap was created as copy!\n";
 }
 
 ClapTrap::~ClapTrap()

@@ -2,11 +2,6 @@
 
 ClapTrap::ClapTrap()
 {
-	this->_name = "Default_name";
-	this->_hitpoints = 10;
-	this->_energyPoints = 10;
-	this->_attackDamage = 0;
-	std::cout << "New Clap Trap was created!\n";
 }
 
 ClapTrap::ClapTrap(std::string const &name)
@@ -15,13 +10,13 @@ ClapTrap::ClapTrap(std::string const &name)
 	this->_hitpoints = 10;
 	this->_energyPoints = 10;
 	this->_attackDamage = 0;
-	std::cout << "New Clap Trap " << this->_name << " created!\n";
+	std::cout << "New Clap Trap " << this->_name << " was created!\n";
 }
 
 ClapTrap::ClapTrap(const ClapTrap &copy)
 {
 	*this = copy;
-	std::cout << "New Clap Trap " << this->_name << " created as copy!\n";
+	std::cout << "New Clap Trap " << this->_name << " was created as copy!\n";
 }
 
 ClapTrap::~ClapTrap()
