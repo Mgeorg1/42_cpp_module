@@ -4,8 +4,9 @@
 
 class	ScavTrap : public ClapTrap
 {
-	public:
+	private:
 		ScavTrap();
+	public:
 		ScavTrap(std::string const &name);
 		ScavTrap(const ScavTrap &copy);
 		ScavTrap	&operator=(const ScavTrap &copy);

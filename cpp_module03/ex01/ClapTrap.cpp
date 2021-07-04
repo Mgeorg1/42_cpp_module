@@ -2,11 +2,6 @@
 
 ClapTrap::ClapTrap()
 {
-	this->_name = "Default_name";
-	this->_hitpoints = 10;
-	this->_energyPoints = 10;
-	this->_attackDamage = 0;
-	std::cout << "New Clap Trap was created!\n";
 }
 
 ClapTrap::ClapTrap(std::string const &name)

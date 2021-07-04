@@ -4,8 +4,9 @@
 
 class FragTrap : public ClapTrap
 {
-public:
+private:
 	FragTrap();
+public:
 	FragTrap(std::string const &name);
 	FragTrap	&operator=(const FragTrap &copy);
 	FragTrap(const FragTrap &copy);

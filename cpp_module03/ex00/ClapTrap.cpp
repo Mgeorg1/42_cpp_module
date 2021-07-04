@@ -2,11 +2,6 @@
 
 ClapTrap::ClapTrap()
 {
-	this->_name = "Default_name";
-	this->_hitpoints = 10;
-	this->_energyPoints = 10;
-	this->_attackDamage = 0;
-	std::cout << "New Clap Trap was created!\n";
 }
 
 ClapTrap::ClapTrap(std::string const &name)
@@ -57,6 +52,7 @@ void	ClapTrap::takeDamage(unsigned int amount)
 	this->_hitpoints -= amount;
 	if (this->_hitpoints <= 0)
 	{
+		this->_hitpoints = 0;
 		std::cout << "FR4G-TP " << this->_name << " took critical damage!\n";
 		this->~ClapTrap();
 	}

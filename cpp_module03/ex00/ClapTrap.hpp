@@ -10,10 +10,10 @@ private:
 	int			_hitpoints;
 	int			_energyPoints;
 	int			_attackDamage;
-public:
 	ClapTrap();
+public:
 	ClapTrap(std::string const &name);
-	~ClapTrap();
+	virtual ~ClapTrap();
 	ClapTrap(const ClapTrap &copy);
 	ClapTrap	&operator=(const ClapTrap &copy);
 	void		attack(std::string const &target);

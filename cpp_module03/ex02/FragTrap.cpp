@@ -2,10 +2,6 @@
 
 FragTrap::FragTrap()
 {
-	std::cout << "Frag Trap was created!\n";
-	this->_hitpoints = 100;
-	this->_energyPoints = 100;
-	this->_attackDamage = 30;
 }
 
 FragTrap::FragTrap(std::string const &name) : ClapTrap(name)
@@ -28,8 +24,8 @@ FragTrap& FragTrap::operator=(const FragTrap &copy)
 
 FragTrap::FragTrap(const FragTrap &copy)
 {
-	std::cout << "Frag Trap " << this->_name << " was created as copy!\n";
 	*this = copy;
+	std::cout << "Frag Trap " << this->_name << " was created as copy!\n";
 }
 
 FragTrap::~FragTrap()

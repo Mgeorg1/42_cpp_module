@@ -2,10 +2,6 @@
 
 ScavTrap::ScavTrap()
 {
-	this->_hitpoints = 100;
-	this->_energyPoints = 50;
-	this->_attackDamage = 20;
-	std::cout << "Scav Trap was created!\n";
 }
 
 ScavTrap::ScavTrap(std::string const &name) : ClapTrap(name)

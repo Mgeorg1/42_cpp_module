@@ -2,7 +2,7 @@
 
 int	main()
 {
-	ClapTrap a;
+	ClapTrap a("Default");
 	ClapTrap b("Fury");
 	a = b;
 	ClapTrap c("Valkyrie");
