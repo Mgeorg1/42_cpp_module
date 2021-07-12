@@ -13,6 +13,14 @@ int main()
 	j->makeSound();
 	meta->makeSound();
 	std::cout << "\n###################################\n\n";
+	Cat k;
+	Cat k1(k);
+	Dog l;
+	Dog l1(l);
+	std::cout << "\n###################################\n\n";
+	k1 = k;
+	l1 = l;
+	std::cout << "\n###################################\n\n";
 	const WrongAnimal *meta1 = new WrongAnimal();
 	const WrongAnimal *i1 = new WrongCat();
 	std::cout << i1->getType() << " " << std::endl;
