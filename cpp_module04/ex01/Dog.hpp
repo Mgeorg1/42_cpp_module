@@ -15,7 +15,9 @@ public:
 	Dog &operator=(Dog const &copy);
 	virtual void makeSound() const;
 	virtual ~Dog();
-	std::string getBrain();
+	std::string getBrainAddr() const;
+	std::string	*getIdeas();
+	void	setIdea(int id, std::string const &idea);
 };
 
 

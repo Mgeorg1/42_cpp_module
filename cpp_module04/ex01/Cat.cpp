@@ -15,15 +15,22 @@ Cat::~Cat()
 Cat& Cat::operator=(Cat const &copy)
 {
 	this->_type = copy._type;
-	delete (this->brain);
-	this->brain = new Brain(*copy.brain);
+	if (this->brain)
+		delete (this->brain);
+	if (copy.brain)
+		this->brain = new Brain(*copy.brain);
+	else
+		this->brain = 0;
 	std::cout << "Assignation operatot was called!\n";
 	return (*this);
 }
 
 Cat::Cat(Cat const &copy) : Animal(copy)
 {
-	*this = copy;
+	if	(copy.brain)
+		this->brain = new Brain(*copy.brain);
+	else
+		this->brain = 0;
 	std::cout << "New cat was born as copy!\n";
 }
 
@@ -32,9 +39,19 @@ void Cat::makeSound() const
 	std::cout << "Mrrrr... Meow!\n";
 }
 
-std::string Cat::getBrain()
+std::string Cat::getBrainAddr() const
 {
 	std::stringstream addr;
 	addr << this->brain;
 	return (addr.str());
+}
+
+std::string* Cat::getIdeas()
+{
+	return (this->brain->getIdeas());	
+} 
+
+void	Cat::setIdea(int id, std::string const &idea)
+{
+	this->brain->setIdea(id, idea);
 }

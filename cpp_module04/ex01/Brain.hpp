@@ -6,12 +6,14 @@
 class Brain
 {
 private:
-	std::string ideas[100];
+	std::string *ideas;
 public:
 	Brain();
 	Brain &operator=(Brain const &copy);
 	Brain(Brain const &copy);
 	~Brain();
+	std::string *getIdeas();
+	void	setIdea(int id, std::string const &idea);
 };
 
 #endif
