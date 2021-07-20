@@ -1,7 +1,12 @@
 NAME = ex03
 
 SRCS = 	main.cpp \
-		
+		AMateria.cpp \
+		Ice.cpp \
+		Cure.cpp \
+		Character.cpp \
+		MateriaSource.cpp \
+
 COMP = clang++ -Wall -Wextra -Werror
 
 OBJS = $(SRCS:.cpp=.o)
