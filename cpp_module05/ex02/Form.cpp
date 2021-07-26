@@ -80,7 +80,7 @@ const char *Form::isAlredySignedException::what() const throw()
 
 const char *Form::isNotSignedException::what() const throw()
 {
-	return ("Form exeption: this form is not  signed");
+	return ("Form exeption: this form is not signed");
 }
 
 void	Form::execute(Bureaucrat const &executor) const

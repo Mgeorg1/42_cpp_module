@@ -12,18 +12,14 @@ ShrubberyCreationForm &ShrubberyCreationForm::operator=(ShrubberyCreationForm co
 }
 
 ShrubberyCreationForm::ShrubberyCreationForm(ShrubberyCreationForm const &copy) :\
-	Form(this->getName(), copy.getSignGrade(), copy.getExecGrade())
+	Form(copy.getName(), copy.getSignGrade(), copy.getExecGrade())
 {
 	*this = copy;
 }
 
-std::string	&ShrubberyCreationForm::getTarget()
-{
-	return (this->_target);
-}
-
 void	ShrubberyCreationForm::action(Bureaucrat const &executor) const
 {
+	(void)executor;
 	std::ofstream file;
 	std::string const tree[11] = {
 		"     ccee88oo\n",
@@ -61,3 +57,4 @@ const char *ShrubberyCreationForm::CannotWriteInFile::what() const throw()
 {
 	return ("ShrubberyCreationForm: Cannot write in file exception");
 }
+

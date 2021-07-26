@@ -1,6 +1,8 @@
-NAME =	ex01
+NAME =	ex02
 
-SRCS =	Bureaucrat.cpp main.cpp Form.cpp ShrubberyCreationForm.cpp
+SRCS =	Bureaucrat.cpp main.cpp \
+		Form.cpp ShrubberyCreationForm.cpp \
+		PresidentialPardonForm.cpp RobotomyRequestForm.cpp 
 
 COMP = clang++ -Wall -Wextra -Werror
 

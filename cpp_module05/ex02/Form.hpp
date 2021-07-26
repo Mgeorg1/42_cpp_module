@@ -33,7 +33,7 @@ public:
 		public:
 			virtual const char *what() const throw();
 	};
-	class isNotSignedException : std::exception
+	class isNotSignedException : public std::exception
 	{
 		public:
 			virtual const char *what() const throw();

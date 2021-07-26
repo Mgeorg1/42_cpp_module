@@ -15,8 +15,7 @@ public:
 	ShrubberyCreationForm& operator=(ShrubberyCreationForm const &copy);
 	virtual ~ShrubberyCreationForm();
 
-	std::string			&getTarget();
-	void				action(Bureaucrat const &executor) const;
+	void	action(Bureaucrat const &executor) const;
 
 	class CannotOpenFile : public std::exception
 	{
