@@ -36,7 +36,7 @@ public:
 
 	void	beSigned(Bureaucrat const &bureaucrat);
 
-	std::string const	getName() const;
+	std::string const	&getName() const;
 	bool				getSign() const;
 	int const			getSignGrade() const;
 	int const			getExecGrade() const;

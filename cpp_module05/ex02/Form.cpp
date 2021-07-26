@@ -26,7 +26,7 @@ Form &Form::operator=(Form const &copy)
 
 Form::~Form(){}
 
-std::string const	Form::getName() const
+std::string const	&Form::getName() const
 {
 	return (this->_name);
 }
@@ -76,4 +76,18 @@ const char *Form::GradeTooLowException::what() const throw()
 const char *Form::isAlredySignedException::what() const throw()
 {
 	return ("Form exeption: this form is already signed");
+}
+
+const char *Form::isNotSignedException::what() const throw()
+{
+	return ("Form exeption: this form is not  signed");
+}
+
+void	Form::execute(Bureaucrat const &executor) const
+{
+	if (executor.getGrade() > this->_execGrade)
+		throw Form::GradeTooLowException();
+	if (!_signed)
+		throw Form::isNotSignedException();
+	this->action(executor);
 }
