@@ -34,4 +34,16 @@ int main()
 	{
 		std::cerr << e.what() << '\n';
 	}
+	ShrubberyCreationForm formE("testE");
+	tom.signForm(formE);
+	try
+	{
+		formE.execute(tom);
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << '\n';
+	}
+	
+
 }
