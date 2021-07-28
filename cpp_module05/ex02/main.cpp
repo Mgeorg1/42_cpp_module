@@ -14,16 +14,20 @@ int main()
 	{
 		std::cerr << e.what() << '\n';
 	}
+	/*************************************************/
+	std::cout << "\n";
 	RobotomyRequestForm formR("rTest");
 	tom.signForm(formR);
 	try
 	{
 		formR.execute(tom);
 	}
+	/*************************************************/
 	catch(const std::exception& e)
 	{
 		std::cerr << e.what() << '\n';
 	}
+	std::cout << "\n";
 	PresidentialPardonForm formP("testP");
 	tom.signForm(formP);
 	try
@@ -34,8 +38,10 @@ int main()
 	{
 		std::cerr << e.what() << '\n';
 	}
+	/*************************************************/
+	std::cout << "\n";
 	ShrubberyCreationForm formE("testE");
-	tom.signForm(formE);
+	// tom.signForm(formE);
 	try
 	{
 		formE.execute(tom);
@@ -44,6 +50,7 @@ int main()
 	{
 		std::cerr << e.what() << '\n';
 	}
+
 	
 
 }

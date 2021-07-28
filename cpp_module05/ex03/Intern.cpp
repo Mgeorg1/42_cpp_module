@@ -33,21 +33,26 @@ Intern &Intern::operator=(Intern const &copy)
 Form	*Intern::makeForm(std::string const name, std::string const target)
 {
 	typedef Form* (Intern::*func) (std::string const &target);
+	Form *form = NULL;
 	func createForm[3] = {
 		&Intern::createShrubberyForm,
 		&Intern::createRobotomyRequestForm,
 		&Intern::createPresidentialPardon,
 	};
 	std::string formNames[3] = {
-		"shrubbery creation form",
-		"robotomy request form",
-		"presidential pardon form"
+		"shrubbery creation",
+		"robotomy request",
+		"presidential pardon"
 	};
 
 	for (int i = 0; i < 3; i++)
 	{
 		if (name == formNames[i])
-			return (this->*createForm[i])(target);
+		{
+			form = (this->*createForm[i])(target);
+			std::cout << "Intern creates <" << form->getName() << ">\n";
+			return (form);
+		}
 	}
 	throw Intern::FormNotFoundException();
 	return (NULL);

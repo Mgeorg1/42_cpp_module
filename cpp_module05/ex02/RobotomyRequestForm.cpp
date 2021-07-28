@@ -20,7 +20,7 @@ RobotomyRequestForm::RobotomyRequestForm(RobotomyRequestForm const &copy) :\
 void	RobotomyRequestForm::action(Bureaucrat const &executor) const
 {
 	(void) executor;
-	std::cout << "*Some drilling noises\n";
+	std::cout << "*Some drilling noises*\n";
 	if (rand() % 2 == 0)
 		std::cout << _target << " has been robotomized\n";
 	else
