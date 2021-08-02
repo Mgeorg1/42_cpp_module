@@ -17,6 +17,8 @@ private:
 	void printChar();
 public:
 	ScalarConversion(std::string source);
+	ScalarConversion(ScalarConversion const &copy);
+	ScalarConversion &operator=(ScalarConversion const &copy);
 	void printConversions();
 	~ScalarConversion();
 };

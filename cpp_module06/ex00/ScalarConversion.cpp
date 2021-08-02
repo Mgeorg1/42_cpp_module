@@ -12,16 +12,31 @@ void	ScalarConversion::printConversions()
 
 ScalarConversion::~ScalarConversion(){}
 
+
+ScalarConversion &ScalarConversion::operator=(ScalarConversion const &copy)
+{
+	this->_source = copy._source;
+	return (*this);
+}
+
+ScalarConversion::ScalarConversion(ScalarConversion const &copy)
+{
+	*this = copy;
+}
+
 void ScalarConversion::printChar()
 {
 	std::cout << "char: ";
 	try
 	{
-		char ch = static_cast<char>(std::stoi(this->_source));
 		const char *s = _source.c_str();
-		if (_source.length() == 1 && (s[0] >= 32 && s[0] <= 47) || (s[0] >= 58 && s[0] <= 126))
+		if (_source.length() == 1 && ((s[0] >= 32 && s[0] <= 47) || (s[0] >= 58 && s[0] <= 126)))
+		{
 			std::cout << "'" << _source << "'\n";
-		else if (std::isprint(ch))
+			return ;
+		}
+		char ch = static_cast<char>(std::stoi(this->_source));
+		if (std::isprint(ch))
 			std::cout << "'" << ch << "'\n";
 		else
 			std::cout << "Non displayable\n";
@@ -38,6 +53,7 @@ void ScalarConversion::printInt()
 	try
 	{
 		int i = static_cast<int>(std::stoi(this->_source));
+		
 		std::cout << i << "\n";
 	}
 	catch(const std::exception& e)
@@ -75,3 +91,4 @@ void ScalarConversion::printDouble()
 		std::cout << "impossible\n";
 	}
 }
+
