@@ -3,19 +3,20 @@
 #include <vector>
 #include <exception>
 #include <cmath>
-
+#include <string>
+#include <iostream>
 class Span
 {
 private:
-	std::vector<int> _ints;
-	int		_n;
+	std::vector<int>	_ints;
+	unsigned int		_n;
 	Span();
 public:
-	Span(int n);
+	Span(unsigned int n);
 	Span(const Span &copy);
 	Span& operator=(const Span &copy);
 	~Span();
-	class exceptionIsFull : public std::exception
+	class exceptionOutOfRange : public std::exception
 	{
 	public:
 		virtual const char *what() const throw();
@@ -27,6 +28,7 @@ public:
 	};
 
 	void addNumber(int num);
+	void addNumber(std::vector<int>::iterator first, std::vector<int>::iterator last);
 	long int shortestSpan();
 	long int longestSpan();
 };
