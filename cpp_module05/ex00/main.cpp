@@ -12,12 +12,14 @@ int main()
 	{
 		std::cerr << e.what() << '\n';
 	}
+
 	/**************************************/
 	try
 	{
 		Bureaucrat tom("Tom", 151);
 		std::cout << tom << std::endl;
 	}
+
 	catch(const std::exception& e)
 	{
 		std::cerr << e.what() << '\n';

@@ -15,6 +15,7 @@ public:
 	
 	Array& operator=(Array const &copy);
 	T& operator[](unsigned int const  i);
+	T const & operator[](unsigned int const  i) const ;
 	class ArrayOutOfLimit : public std::exception
 	{
 		public:
@@ -24,6 +25,6 @@ public:
 	unsigned int size() const;
 };
 
-#include "Array.ipp"
+#include "Array.tpp"
 
 #endif

@@ -6,14 +6,14 @@ int main()
 	Bureaucrat tom("Tom", 1);
 	ShrubberyCreationForm form("test");
 	tom.signForm(form);
-	try
-	{
+	// try
+	// {
 		form.execute(tom);
-	}
-	catch(const std::exception& e)
-	{
-		std::cerr << e.what() << '\n';
-	}
+	// }
+	// catch(const std::exception& e)
+	// {
+	// 	std::cerr << e.what() << '\n';
+	// }
 	/*************************************************/
 	std::cout << "\n";
 	RobotomyRequestForm formR("rTest");

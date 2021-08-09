@@ -26,7 +26,6 @@ int main()
 		tom.signForm(*form2);
 		form2->execute(tom);
 		delete form2;
-
 	}
 	catch(const std::exception& e)
 	{
@@ -41,7 +40,6 @@ int main()
 		tom.signForm(*form3);
 		form3->execute(tom);
 		delete form3;
-
 	}
 	catch(const std::exception& e)
 	{
@@ -49,13 +47,12 @@ int main()
 	}
 	/*************************************************/
 	std::cout << "\n";
+	Form *form4;
 	try
 	{
-		Form *form4;
 		form4 = someRandomIntern.makeForm("unknown form", "Bender");
 		tom.signForm(*form4);
 		form4->execute(tom);
-
 	}
 	catch(const std::exception& e)
 	{

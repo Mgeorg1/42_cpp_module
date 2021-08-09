@@ -8,6 +8,7 @@ Array<T>::Array(unsigned int length) : _length(length)
 	_array = new T[this->_length];
 }
 
+
 template<typename T>
 Array<T>::Array(Array const &copy)
 {
@@ -41,6 +42,15 @@ const char* Array<T>::ArrayOutOfLimit::what() const throw()
 
 template<typename T>
 T& Array<T>::operator[](unsigned int const i)
+{
+	if (i >= this->_length)
+		throw ArrayOutOfLimit();
+	else
+		return (this->_array[i]);
+}
+
+template<typename T>
+T const& Array<T>::operator[](unsigned int const i) const
 {
 	if (i >= this->_length)
 		throw ArrayOutOfLimit();
